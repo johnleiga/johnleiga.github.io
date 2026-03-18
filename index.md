@@ -48,3 +48,4 @@ I focus on understanding problems at a fundamental level and building solutions 
 
 - [LinkedIn](https://www.linkedin.com/in/john-leiga-a56b13180/)
 - [GitHub](https://github.com/johnleiga)
+- [john.leiga@gmail.com](mailto:john.leiga@gmail.com)
