@@ -56,14 +56,3 @@ This was not a bracket-design exercise. It was a case where the mechanical archi
 ## Related Work
 
 On the same family of products, I also developed a numerical diaphragm modeling tool for cases where legacy internal tools did not capture mechanical nonlinearity and standard FEA struggled with pre-stressed geometries. The tool predicted diaphragm deflection and linearity behavior, included magnetic sensor-gap effects, and was validated through manufacturing testing.
-
----
-
-## Optional Figures To Add Later
-
-If I expand this page, I would add:
-
-1. A simplified cross-section sketch of the original architecture vs. redesign  
-2. A diagram showing the shift from expansion-dominant to compression-dominant behavior  
-3. A simple validation table showing target vs. prototype performance  
-4. A short “design tradeoffs” section on cost, manufacturability, and accuracy
