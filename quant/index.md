@@ -1,6 +1,12 @@
 # Quantitative Research & Modeling System
 
 A production-style machine learning system for large-scale financial data processing, modeling, and strategy evaluation.
+- Built a **modular, production-style ML pipeline** for financial data processing and modeling  
+- Designed system to handle **large-scale datasets (stocks + options)**  
+- Enabled **fully reproducible experiments** via configuration-driven workflows  
+- Implemented **multi-objective modeling** (direction, magnitude, tail risk)  
+- Developed **realistic backtesting engine** with execution constraints and risk controls  
+- Integrated **live inference pipeline** for real-time signal generation  
 
 ## Overview
 

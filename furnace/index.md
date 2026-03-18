@@ -1,6 +1,12 @@
 # Industrial Furnace System Optimization
 
 A mechanical and controls-focused redesign of a multi-furnace industrial process to improve stability, eliminate startup waste, and increase operational reliability.
+- Stabilized performance across a **14-furnace industrial system**  
+- Eliminated **startup material loss** through automated startup sequence design  
+- Identified and resolved **mechanical bottleneck (rotary airlock)** causing shutdowns  
+- Implemented **density-based feedback control** to improve process consistency  
+- Reduced manual intervention and improved system reliability  
+- Delivered approximately **$200K in annual savings**  
 
 ## Overview
 

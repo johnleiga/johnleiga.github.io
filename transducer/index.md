@@ -1,6 +1,12 @@
 # Aerospace Pressure Transducer Redesign
 
 A first-principles redesign of a high-reliability aerospace pressure transducer to preserve a major program under aggressive cost constraints.
+- Preserved a **$40M+ aerospace program** under aggressive cost constraints  
+- Achieved approximately **30% system cost reduction** through mechanical redesign  
+- Eliminated need for **secondary reference pressure gage**  
+- Enabled transition to **lower-cost standard electronics architecture**  
+- Reduced mechanical gage component cost by approximately **50%**  
+- Validated performance through **prototype build and testing on critical pressure ranges**  
 
 ## Overview
 
