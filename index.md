@@ -46,5 +46,5 @@ I focus on understanding problems at a fundamental level and building solutions 
 
 ## Contact
 
-- LinkedIn: ([add your link](https://www.linkedin.com/in/john-leiga-a56b13180/))  
-- GitHub: https://github.com/<johnleiga>  
+- ([LinkedIn](https://www.linkedin.com/in/john-leiga-a56b13180/))  
+- ([GitHub]https://github.com/<johnleiga>)  
