@@ -1256,33 +1256,44 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
 
+.project-summary-card {
+  padding: 30px;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 86%);
+  border-radius: 18px;
+}
+
+.project-summary-card h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+}
+
+.project-summary-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+}
+
+.project-summary-card ul li {
+  line-height: 1.6;
+}
+
+.project-summary-card ul li+li {
+  margin-top: 12px;
+}
+
+.project-summary-card p:last-child {
+  margin-bottom: 0;
+}
+
 /*--------------------------------------------------------------
 # Service Details Section
 --------------------------------------------------------------*/
 .service-details .services-list {
-  padding: 10px 30px;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
   margin-bottom: 20px;
-}
-
-.service-details .services-list a {
-  display: block;
-  line-height: 1;
-  padding: 8px 0 8px 15px;
-  border-left: 3px solid color-mix(in srgb, var(--default-color), transparent 70%);
-  margin: 20px 0;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  transition: 0.3s;
-}
-
-.service-details .services-list a.active {
-  color: var(--heading-color);
-  font-weight: 700;
-  border-color: var(--accent-color);
-}
-
-.service-details .services-list a:hover {
-  border-color: var(--accent-color);
 }
 
 .service-details .services-img {
@@ -1387,19 +1398,12 @@ section,
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.35) !important;
 }
 
-.service-details .services-list {
-  border-color: rgba(255, 255, 255, 0.12) !important;
+.project-summary-card {
+  border-color: rgba(255, 255, 255, 0.14) !important;
 }
 
-.service-details .services-list a {
-  color: rgba(255, 255, 255, 0.78) !important;
-  border-left-color: rgba(255, 255, 255, 0.2) !important;
-}
-
-.service-details .services-list a.active,
-.service-details .services-list a:hover {
-  color: #ffffff !important;
-  border-left-color: var(--accent-color) !important;
+.project-summary-card h3 {
+  border-bottom-color: rgba(255, 255, 255, 0.12) !important;
 }
 
 .portfolio .portfolio-content {
