@@ -591,6 +591,27 @@ section,
   border-bottom: 2px solid var(--accent-color);
 }
 
+.hero .hero-resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 28px;
+  padding: 14px 24px;
+  border-radius: 999px;
+  background: #0d6efd;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  box-shadow: 0 14px 28px rgba(13, 110, 253, 0.28);
+}
+
+.hero .hero-resume-btn:hover,
+.hero .hero-resume-btn:focus {
+  background: #3d8bfd;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
 .hero .social-links {
   margin-top: 25px;
 }
@@ -895,6 +916,10 @@ section,
 --------------------------------------------------------------*/
 .services .service-item {
   position: relative;
+  height: 100%;
+  padding: 32px 28px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 18px;
 }
 
 .services .service-item .icon {
@@ -941,6 +966,14 @@ section,
 .services .service-item .description {
   line-height: 24px;
   font-size: 14px;
+}
+
+.services .service-item h3 {
+  margin: 22px 0 14px;
+}
+
+.services .service-item p {
+  margin-bottom: 0;
 }
 
 /*--------------------------------------------------------------
@@ -1059,6 +1092,21 @@ section,
   margin-bottom: 40px;
 }
 
+.contact .info-link {
+  display: flex;
+  align-items: flex-start;
+  color: inherit;
+}
+
+.contact .info-link:last-child {
+  margin-bottom: 0;
+}
+
+.contact .info-link:hover,
+.contact .info-link:focus {
+  color: inherit;
+}
+
 .contact .info-item i {
   font-size: 20px;
   color: var(--accent-color);
@@ -1089,6 +1137,12 @@ section,
 .contact .info-item:hover i {
   background: var(--accent-color);
   color: var(--contrast-color);
+}
+
+.contact .info-link:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 8px;
+  border-radius: 12px;
 }
 
 .contact .php-email-form {
