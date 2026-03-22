@@ -919,7 +919,7 @@ section,
   height: 100%;
   padding: 32px 28px;
   border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: 18px;
+  border-radius: 0;
 }
 
 .services .service-item .icon {
@@ -1259,7 +1259,7 @@ section,
 .project-summary-card {
   padding: 30px;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 86%);
-  border-radius: 18px;
+  border-radius: 0;
 }
 
 .project-summary-card h3 {
