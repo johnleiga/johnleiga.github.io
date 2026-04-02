@@ -655,7 +655,7 @@ section,
 .about .content ul li {
   margin-bottom: 20px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .about .content ul strong {
@@ -665,6 +665,7 @@ section,
 .about .content ul i {
   font-size: 16px;
   margin-right: 5px;
+  margin-top: 3px;
   color: var(--accent-color);
   line-height: 0;
 }
@@ -1080,6 +1081,7 @@ section,
   background-color: var(--surface-color);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   padding: 30px;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 86%);
 }
 
 @media (max-width: 575px) {
@@ -1132,6 +1134,30 @@ section,
   padding: 0;
   margin-bottom: 0;
   font-size: 14px;
+}
+
+.contact .info-wrap ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact .info-wrap ul li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.contact .info-wrap ul li i {
+  font-size: 16px;
+  margin-right: 6px;
+  margin-top: 2px;
+  color: var(--accent-color);
+  line-height: 1;
+  background: none !important;
+  width: auto;
+  height: auto;
+  border-radius: 0;
 }
 
 .contact .info-item:hover i {
@@ -1289,6 +1315,25 @@ section,
   margin-bottom: 0;
 }
 
+.content-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.content-list li {
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.content-list i {
+  font-size: 20px;
+  margin-right: 8px;
+  color: var(--accent-color);
+}
+
 /*--------------------------------------------------------------
 # Service Details Section
 --------------------------------------------------------------*/
@@ -1298,6 +1343,10 @@ section,
 
 .service-details .services-img {
   margin-bottom: 20px;
+}
+
+.starter-section .services-img {
+  margin-bottom: 30px;
 }
 
 .service-details h3 {
@@ -1324,6 +1373,11 @@ section,
   padding: 5px 0;
   display: flex;
   align-items: center;
+}
+
+.service-details .project-summary-card ul li {
+  padding: 0;
+  display: list-item;
 }
 
 .service-details ul i {
@@ -1396,6 +1450,10 @@ section,
 .starter-section .info-wrap {
   background-color: #0f1c2e !important;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.35) !important;
+}
+
+.contact .info-wrap {
+  border-color: rgba(255, 255, 255, 0.14) !important;
 }
 
 .project-summary-card {

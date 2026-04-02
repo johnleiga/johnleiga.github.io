@@ -67,30 +67,24 @@
     </div>
 
     <section id="starter-section" class="starter-section section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Production-Style ML Research Infrastructure</h2>
-        <p>
-          A modular, independently built system for large-scale equity and options data processing, feature engineering,
-          model training, backtesting, and live-ready inference.
-        </p>
-      </div>
-
       <div class="container" data-aos="fade-up">
         <div class="row gy-4">
           <div class="col-lg-8">
             <p>
-              I built this project to demonstrate end-to-end system design rather than isolated modeling work. Instead of relying on
-              notebooks or one-off scripts, I structured the repository like production research infrastructure: modular pipeline stages,
-              clear data contracts, configuration-driven experiments, reproducible run artifacts, and realistic backtesting assumptions.
+              A production-oriented Python pipeline for equity and options data acquisition, feature engineering,
+              labeling, model training, backtesting, evaluation, explainability, and live-like inference.
             </p>
             <p>
-              The system ingests stock and options data at scale, builds features across price, volatility, volume, Greeks, and term structure,
-              generates labels for direction, magnitude, and tail risk, trains LightGBM models, evaluates strategies through structured backtests,
-              and supports live-ready inference logic.
+              This project demonstrates staged research system design rather than notebook-first modeling work.
             </p>
             <p>
-              While the domain is quantitative research, the engineering principles are the same ones I apply in hardware: separation of concerns,
-              scalable architecture, validation between stages, and a bias toward systems that can be extended without becoming fragile.
+              I built it around independent stages, explicit artifacts, shared contracts, configuration-driven runs, and reproducible outputs under a structured run directory.
+            </p>
+            <p>
+              The pipeline ingests stock bars and long-format options data, builds features from underlying price action and options structure, generates targets for direction, magnitude, and tail risk, trains LightGBM models with multi-head outputs, and runs backtesting, evaluation, and explainability stages on the resulting artifacts.
+            </p>
+            <p>
+              Although the application is quantitative research, the engineering principles are the same ones I apply in hardware: separation of concerns, stage-level validation, reproducible outputs, and systems that can grow without becoming fragile.
             </p>
           </div>
 
@@ -98,12 +92,12 @@
             <div class="info-wrap project-summary-card">
               <h3>Project Summary</h3>
               <ul>
-                <li>Modular CLI-based pipeline</li>
-                <li>Configuration-driven experimentation using TOML</li>
-                <li>Large-dataset handling with Parquet and PyArrow</li>
-                <li>Multi-objective modeling using LightGBM</li>
-                <li>Auditable backtesting with realistic execution constraints</li>
-                <li>Live inference pipeline for real-time signal generation</li>
+                <li><strong>Project Type</strong>: ML research infrastructure</li>
+                <li><strong>Primary Focus</strong>: Data acquisition, staged modeling, backtesting, evaluation, and explainability</li>
+                <li><strong>Framework</strong>: Modular pipeline with TOML-based configuration and staged artifacts</li>
+                <li><strong>Modeling</strong>: LightGBM with multi-head outputs and artifact-based training flow</li>
+                <li><strong>Data Flow</strong>: Equity bars and long-format options data written into downstream stage contracts</li>
+                <li><strong>Output</strong>: Reproducible runs, auditable backtests, bundled reports, and XAI artifacts</li>
               </ul>
               <p class="mt-3">
                 <a href="https://github.com/johnleiga" target="_blank" rel="noopener noreferrer"><strong>View GitHub Profile</strong></a>
@@ -116,16 +110,20 @@
           <div class="col-lg-12">
             <h3>Architecture Focus</h3>
             <p>
-              The pipeline is separated into data ingestion, feature engineering, labeling, model training, backtesting, live inference,
-              and explainability. Each stage is independently executable and externally configured, which makes experiments reproducible
-              and debugging much more targeted.
+              The repository is divided into data acquisition plus modular `ml` stages for features, labeling, training, backtesting, evaluation, explainability, and live inference. Each stage runs independently, writes explicit artifacts, and connects to the next stage through a small set of shared contracts.
             </p>
+            <img src="assets/img/system_architecture_diagram.png" alt="System architecture diagram for the quantitative research and modeling system" class="img-fluid services-img">
 
             <h3>Why it matters</h3>
+            <ul class="content-list">
+              <li><i class="bi bi-check-circle"></i> <span>Shows system-level engineering outside a notebook-only workflow</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Demonstrates modular architecture, reproducibility, and scalable stage boundaries</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Shows the ability to build technical infrastructure that supports analysis, reporting, and iteration</span></li>
+            </ul>
+
+            <h3>Engineering themes</h3>
             <p>
-              I included this project because it shows how I think about complex systems beyond traditional mechanical engineering work.
-              It demonstrates end-to-end ownership, architectural judgment, scalability, and the ability to build technical infrastructure
-              from scratch around real constraints.
+              This project reflects staged system design, explicit contracts between modules, and validation at each boundary so complex analytical work remains scalable, testable, and reliable.
             </p>
           </div>
         </div>
