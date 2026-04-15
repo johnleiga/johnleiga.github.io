@@ -942,14 +942,6 @@ section,
   line-height: 0;
 }
 
-.services .service-item:hover .icon {
-  background: var(--surface-color);
-}
-
-.services .service-item:hover .icon i {
-  color: var(--accent-color);
-}
-
 .services .service-item .title {
   font-weight: 700;
   margin-bottom: 15px;
