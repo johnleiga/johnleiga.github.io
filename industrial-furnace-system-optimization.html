@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Industrial Furnace System Optimization | John Leiga</title>
-  <meta content="Project details for an industrial furnace system optimization project completed by John Leiga." name="description">
+  <title>Industrial Furnace Controls and Startup Automation | John Leiga</title>
+  <meta content="Technical case study for an industrial furnace controls and startup automation project completed by John Leiga." name="description">
   <meta content="Manufacturing, Furnace Optimization, Mechanical Engineer, John Leiga" name="keywords">
 
   <link href="assets/img/favicon.png" rel="icon">
@@ -54,7 +54,7 @@
 
     <div class="page-title dark-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Industrial Furnace System Optimization</h1>
+        <h1 class="mb-2 mb-lg-0">Industrial Furnace Controls and Startup Automation</h1>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
@@ -70,29 +70,28 @@
         <div class="row gy-4">
 
           <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-            <img src="assets/img/perlite-furnace.jpg" alt="Industrial furnace system optimization" class="img-fluid services-img">
+            <div class="portfolio-description">
+              <h3>Zero waste startup, live bulk density control, and furnace stability improvements for a 14 furnace perlite expansion system.</h3>
+              <p>
+                This project focused on improving startup repeatability, bulk density control, and process stability on a 14 furnace perlite expansion system. The work combined mechanical troubleshooting, controls logic, PID tuning, DOE, operator workflow updates, and production validation.
+              </p>
+            </div>
+
+            <figure class="mt-4">
+              <img src="assets/img/portfolio/perlite_process_flow.png" alt="Perlite process flow diagram" class="img-fluid services-img">
+              <figcaption>Perlite expansion process flow from ore feed through separation, screening, and routing.</figcaption>
+            </figure>
           </div>
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="services-list project-summary-card">
-              <h3>Project Summary</h3>
+              <h3>Project Metrics</h3>
               <ul>
-                <li><strong>Project Type</strong>: Industrial manufacturing optimization</li>
-                <li><strong>Environment</strong>: 14-furnace live production system</li>
-                <li><strong>Primary Focus</strong>: Process stability, bottleneck removal, startup automation</li>
-                <li><strong>Outcome</strong>: Stabilized production and eliminated startup waste</li>
-                <li><strong>Key Results</strong>: ~$200K annual savings and ~$500K in executed capital upgrades</li>
+                <li><strong>System</strong>: 14 vertical perlite expansion furnaces</li>
+                <li><strong>Focus</strong>: Startup automation, bulk density control, PID tuning, DOE</li>
+                <li><strong>Impact</strong>: $200K+ annual savings, improved repeatability, $500K+ CapEx support</li>
+                <li><strong>Tools</strong>: Minitab, PLC and HMI logic, process data, DOE, operator validation</li>
               </ul>
-            </div>
-
-            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-              <h4>Production engineering in a live operating environment</h4>
-              <p>
-                This project focused on a 14-furnace perlite expansion system that was unstable, labor-intensive, and wasteful at startup.
-              </p>
-              <p>
-                Because the work was done in a live factory environment, the solution had to improve performance without sacrificing operability or reliability.
-              </p>
             </div>
           </div>
 
@@ -100,39 +99,199 @@
 
         <div class="row gy-4 mt-4">
           <div class="col-lg-12" data-aos="fade-up" data-aos-delay="350">
-            <h3>Mechanical and controls improvements that held up in production</h3>
+            <h3>System overview</h3>
 
             <p>
-              I approached the system as an integrated process rather than a collection of isolated issues. I installed sample points, collected operating data, and used that data to identify the primary drivers of instability and waste.
+              Perlite ore is expanded in a vertical furnace, separated from the air stream in a baghouse, passed through a rotary valve that maintains the air seal, screened for particle size, and routed by a diverter either to waste or to the production process.
             </p>
 
             <p>
-              I stabilized performance across the furnace system by tuning interacting control loops in the correct sequence and improving overall process behavior. I also identified an undersized rotary airlock as a shutdown-causing bottleneck and helped eliminate that constraint.
+              Furnace behavior varied with ore type, ambient conditions, equipment condition, and previous run state. Startup required careful control of feed, gas, temperature, and material routing before stable product could be sent downstream.
             </p>
+
+            <h3>The engineering problem</h3>
+
+            <div class="row gy-4">
+              <div class="col-lg-4">
+                <div class="services-list project-summary-card">
+                  <h3>Startup waste</h3>
+                  <p>
+                    Usable expanded perlite was routed to waste during startup until the furnace reached stable operation.
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-lg-4">
+                <div class="services-list project-summary-card">
+                  <h3>Bulk density variability</h3>
+                  <p>
+                    Bulk density depended on furnace temperature, feed behavior, ore properties, airflow, gas flow, and delayed manual sampling.
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-lg-4">
+                <div class="services-list project-summary-card">
+                  <h3>Control instability and operator burden</h3>
+                  <p>
+                    Multiple interacting loops made the furnace sensitive to tuning, deadbands, noisy signals, and operator setup.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <h3>Solution architecture</h3>
 
             <p>
-              To improve product consistency, I implemented density-based feedback control that reduced operator intervention and improved control of the finished product.
+              The solution was built around three connected systems: zero waste startup sequencing, live bulk density feedback, and furnace stability tuning.
             </p>
+
+            <h4>Zero waste startup sequence</h4>
 
             <p>
-              I also developed and deployed a zero-waste automated startup sequence. That work required test runs, parameter development, and controls changes that eliminated startup material loss, saved approximately $200K annually, and scaled across facilities in Bloomfield, MO and King William, VA.
+              I developed a startup sequence that transitioned the furnace from purge and ignition into controlled feeding while capturing usable expanded perlite. The sequence used previous operating conditions to initialize feed and gas behavior, then controlled when the baghouse rotary valve, screener, diverter, gas ramp, feed ramp, and load control became active.
             </p>
+
+            <ol>
+              <li>System purge</li>
+              <li>Furnace ignition</li>
+              <li>Baghouse rotary valve and Rotex screener start</li>
+              <li>Diverter initially routes material to waste</li>
+              <li>Diverter automatically flips to process</li>
+              <li>Gas valve ramps to previous set point</li>
+              <li>Furnace begins feeding with ramp active</li>
+              <li>Load control activates at stack set point or timer completion</li>
+            </ol>
+
+            <h4>Live bulk density feedback control</h4>
 
             <p>
-              The broader effort also supported approximately $500K in feed system upgrades, including equipment planning, vendor coordination, installation, and commissioning.
+              I implemented a live bulk density control loop using weigh feeder data. The system calculated bulk density from scale load and material cross sectional area, filtered the signal using a rolling average, and used the result to adjust the furnace stack temperature set point.
             </p>
 
-            <h3>Why it mattered</h3>
-            <ul>
-              <li><i class="bi bi-check-circle"></i> <span>Stabilized a live 14-furnace production system</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Removed a shutdown-causing bottleneck</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Reduced startup waste and saved approximately $200K annually</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Scaled a proven startup improvement across multiple facilities</span></li>
+            <figure class="mt-4">
+              <img src="assets/img/portfolio/BD_Feedback.png" alt="Bulk density feedback loop diagram" class="img-fluid services-img">
+              <figcaption>Bulk density feedback loop using weigh feeder data to adjust stack temperature set point.</figcaption>
+            </figure>
+
+            <p>
+              The major shift was moving from delayed manual correction toward live process feedback. Instead of waiting for manual samples to reveal density drift, the furnace could use weigh feeder data to make controlled set point adjustments.
+            </p>
+
+            <p>Automatic control was only allowed when:</p>
+            <ul class="content-list">
+              <li><i class="bi bi-check-circle"></i> <span>Scale communication was valid</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Bulk density reading was within a valid range</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Stack temperature was close enough to set point</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Furnace was in the correct operating state</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Required conditions were met for a defined time window</span></li>
             </ul>
+
+            <h4>Furnace stability, load control, and DOE tuning</h4>
+
+            <div class="row gy-4 mt-2">
+              <div class="col-lg-6">
+                <div class="services-list project-summary-card">
+                  <h3>Control loop stability</h3>
+                  <p>
+                    The furnace had multiple interacting control loops, including stack temperature, chamber temperature, mixer pressure, airflow, and gas flow. I tuned the system to reduce oscillation and improve process stability.
+                  </p>
+                  <p>
+                    The improved control strategy favored load control, using ore feed as the primary manipulated variable while keeping air and fuel more stable. This reduced unnecessary interaction between gas and airflow loops and improved repeatability.
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <div class="services-list project-summary-card">
+                  <h3>DOE parameter development</h3>
+                  <p>
+                    I used DOE methods to screen furnace variables, identify interactions, and refine run parameters by ore type. The workflow included initial variable screening, repeated high resolution trials, control improvements to reduce outside variation, re screening, Minitab and Excel analysis, parameter implementation, and iteration.
+                  </p>
+                  <ul>
+                    <li>Gas rate</li>
+                    <li>Chamber temperature</li>
+                    <li>Mixer pressure</li>
+                    <li>Ore type</li>
+                    <li>Bulk density</li>
+                    <li>Air fuel ratio</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <h3>Validation, fail safes, and production readiness</h3>
+            <p>
+              The control strategy included permissive logic and production checks so automatic control would only run under valid conditions. Validation focused on proving that startup logic, density feedback, and fallback behavior were reliable enough for live production.
+            </p>
+            <ul class="content-list">
+              <li><i class="bi bi-check-circle"></i> <span>Startup trials</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Bulk density trend review</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Scale communication checks</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Valid density range checks</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Stack temperature permissives</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Furnace operating state permissives</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Sampling scheme</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Basic condition checks</span></li>
+            </ul>
+
+            <h3>Operator interface and standard work</h3>
+            <p>
+              A major part of the project was making the system usable by production teams. I documented basic condition checks, updated operating standards, and helped define the sampling and calibration workflow needed to support automatic bulk density control.
+            </p>
+            <ul class="content-list">
+              <li><i class="bi bi-check-circle"></i> <span>HMI updates to distinguish manual and automatic control states</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Clearer visibility for set points and process values</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Sampling workflow updates for bulk density verification</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Scale calibration and tracking requirements</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Basic condition checks for air leaks, screens, weigh feeders, sensors, and baghouse draft switches</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Training requirements for standard operation and advanced controls</span></li>
+            </ul>
+
+            <h3>Results</h3>
+            <ul class="content-list">
+              <li><i class="bi bi-check-circle"></i> <span>Developed zero waste startup logic for a 14 furnace perlite expansion system</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Captured usable expanded perlite during startup instead of routing it to waste</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Implemented live bulk density feedback using weigh feeder data</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Added permissive logic and fail safes for production safe automatic control</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Improved furnace stability through PID tuning, load control, and DOE based parameter refinement</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Supported $500K+ in feed system upgrades through planning, vendor coordination, installation, and commissioning</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Delivered $200K+ in expected annual savings through startup waste reduction and process improvements</span></li>
+            </ul>
+
+            <div class="row gy-4 mt-2">
+              <div class="col-lg-6">
+                <div class="services-list project-summary-card">
+                  <h3>What I owned</h3>
+                  <ul>
+                    <li>Startup control sequence design</li>
+                    <li>Bulk density feedback concept and implementation support</li>
+                    <li>PID tuning and furnace stability work</li>
+                    <li>DOE planning and data analysis</li>
+                    <li>HMI and operator workflow updates</li>
+                    <li>Equipment validation and production rollout support</li>
+                    <li>Operator and team leader alignment for standard work adoption</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <div class="services-list project-summary-card">
+                  <h3>Why it was hard</h3>
+                  <ul>
+                    <li>Ore properties varied by source and condition</li>
+                    <li>Ambient temperature and humidity affected startup behavior</li>
+                    <li>Multiple PID loops interacted with each other</li>
+                    <li>Manual sampling created delayed feedback</li>
+                    <li>The solution had to work in live production with operators, not just in testing</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
 
             <h3>Engineering themes</h3>
             <p>
-              This project reflects root-cause analysis, controls integration, process optimization, and implementation in live production systems where solutions must work reliably in operation.
+              This project demonstrates root cause analysis, controls integration, DOE, process optimization, equipment validation, operator centered implementation, and production scale execution.
             </p>
           </div>
         </div>
