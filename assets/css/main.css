@@ -1361,6 +1361,14 @@ section,
   font-size: 15px;
 }
 
+.service-details ol {
+  font-size: 15px;
+}
+
+.service-details ol li {
+  padding: 5px 0;
+}
+
 .service-details ul li {
   padding: 5px 0;
   display: flex;
@@ -1422,6 +1430,9 @@ section,
 .portfolio-details .portfolio-description p,
 .service-details p,
 .service-details ul,
+.service-details ol,
+.service-details ol li,
+.service-details ol li::marker,
 .starter-section p,
 .contact .info-item p,
 .contact .info-wrap p,
